@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(78, 255, 146);
+    background-color: rgb(15, 17, 119);
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -37,7 +37,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
 }
 
 .container{
@@ -53,13 +52,34 @@ main{
 }
 
 .quadrato{
-    width: calc(700px / 10);
-    height: calc(700px / 10);
+    width: 70px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    color: white;
     float: left;
     border: 2px solid white;
     cursor: pointer;
+}
+
+.hard{
+    width: 77.75px;
+    height: 77.75px;
+}
+
+.crazy{
+    width: 99.95px;
+    height: 99.95px;
+}
+
+
+
+.clicked{
+    background-color: rgb(0, 212, 219);
+}
+
+.bomb{
+    background-color: rgb(189, 36, 36);
 }
