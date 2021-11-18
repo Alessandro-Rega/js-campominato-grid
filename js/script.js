@@ -10,10 +10,24 @@ play.addEventListener('click', function(){
 
         quadrato.addEventListener('click', function(){
             this.classList.add('clicked');
-       });
+        });
     }
+
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+// ********************** funzioni *************************
 function addSquare(selezione, num) {
     const node = document.createElement('div');
     node.className = 'quadrato';
