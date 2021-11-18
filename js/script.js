@@ -1,14 +1,24 @@
-
 const play = document.getElementById("play");
 
 play.addEventListener('click', function(){
     const selezione = document.querySelector("#difficolta").value;
     const cont = document.querySelector(".container");
-    let oggetti = "";
+    cont.innerHTML = "";
     for(let i = 1; i <= selezione; i++){
-        if(selezione == 100)oggetti += `<div class="quadrato">${i}</div>`
-        else if(selezione == 81)oggetti += `<div class="quadrato hard">${i}</div>`
-        else if(selezione == 49)oggetti += `<div class="quadrato crazy">${i}</div>`
+        const quadrato = addSquare(selezione, i);
+        cont.appendChild(quadrato);
+
+        quadrato.addEventListener('click', function(){
+            this.classList.add('clicked');
+       });
     }
-    cont.innerHTML = oggetti;
 });
+
+function addSquare(selezione, num) {
+    const node = document.createElement('div');
+    node.className = 'quadrato';
+    node.innerHTML = num;
+    if(selezione == 81)node.className = 'quadrato hard';
+    else if(selezione == 49)node.className = 'quadrato crazy';
+    return node;
+}
